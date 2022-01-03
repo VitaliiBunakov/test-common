@@ -6,10 +6,10 @@
  */
 
 
-let  stickyArrays = () =>  {
+let  stickyArrays = (n) =>  {
     const arrOfArrs = [];
     const sticky = [];
-    for (let j = 0; j < 10; j++) {
+    for (let j = 0; j < n; j++) {
         for (let i = 0; i < 10; i++) {
             if (i === 0) arrOfArrs[j] = [];
             if (sticky.includes(i)) {
@@ -23,13 +23,12 @@ let  stickyArrays = () =>  {
             }
         }
     }
-    console.log(arrOfArrs.entries('5'))
     sticky.sort(( a , b ) =>  a - b );
     arrOfArrs.push(sticky);
     return arrOfArrs;
 
 }
 
-// console.log(stickyArrays())
+console.log(stickyArrays(10))
 
 module.exports = stickyArrays;

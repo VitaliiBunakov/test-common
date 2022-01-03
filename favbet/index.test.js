@@ -1,7 +1,7 @@
 const stickyArrays = require('./index')
 
 describe('Morning vocal test', () => {
-    const result = stickyArrays();
+    const result = stickyArrays(10);
     const lastOne = result[result.length - 2];
     const sticky5 = result[result.length - 1];
     const reference = [];
